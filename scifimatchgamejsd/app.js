@@ -1,10 +1,9 @@
 $(document).ready(function() {
-  $(".boxTop").click(function(){
-    //console.log('you have clicked my son')
-    $(event.currentTarget).css("background-color", "#42f5a7")
+
+  const $container = $('.container'),
+    $boxes = $container.children();
+    //defines boxes as the children of the container
+    $boxes.sort(function() {return Math.random() - .5; });
+    // update dom with new sort
+    $container.append($boxes);
   })
-  $(".boxBottom").click(function(){
-    //console.log('you have clicked my daughter')
-    $(event.currentTarget).css("background-color", "#42f5a7")
-  })
-})

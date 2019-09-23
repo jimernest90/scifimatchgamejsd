@@ -4,21 +4,22 @@ body {
   padding: 0;
   background: url("space image.jpg");
   font-family: 'Saira Stencil One', cursive;
-
+  background-repeat: no-repeat;
+  background: cover;
 }
 h1 {
   color: #000;
-  position: relative;
-  padding-left: 350px;
+  padding-top: 1em;
+  text-align: center;
 }
 .container
 {
-  position: relative;
+  position: fixed;
   width: 1200px;
   height:300px;
-  margin:240px auto;
+  padding-left: 130px;
 }
-.container .boxTop
+.container .peopleOne
 {
   position: relative;
   width: 300px;
@@ -30,10 +31,17 @@ h1 {
   overflow: hidden;
   border-radius: 10px;
 }
-.container .boxTop:hover {
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.container .peopleOne:hover {
   background: white;
 }
-.container .boxBottom
+.container .peopleTwo
 {
   position: relative;
   width: 300px;
@@ -45,7 +53,101 @@ h1 {
   overflow: hidden;
   border-radius: 10px;
 }
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.container .peopleTwo:hover {
+  background: white;
+}
+.container .peopleThree
+{
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background: #000;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.container .peopleThree:hover {
+  background: white;
+}
+.container .quoteOne {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background: #000;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
 
-.container .boxBottom:hover {
+.container .quoteOne:hover {
+  background: white;
+}
+.container .quoteTwo {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background: #000;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.container .quoteTwo:hover {
+  background: white;
+}
+.container .quoteThree {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background: #000;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.container .quoteThree:hover {
   background: white;
 }
