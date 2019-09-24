@@ -33,7 +33,7 @@ $(document).ready(function() {
       // and the first guess matches the second match...
       if (firstGuess === secondGuess) {
         // run the match function
-        firstGuess.hide()
+        
       }
     }
     })
