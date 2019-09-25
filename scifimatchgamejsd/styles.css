@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -12,19 +17,31 @@ h1 {
   padding-top: 1em;
   text-align: center;
 }
-.container
+.game
 {
   position: fixed;
   width: 1200px;
   height:300px;
   padding-left: 130px;
 }
-.container .mccoy
+.grid .box
 {
   position: relative;
   width: 300px;
   height: 100px;
   background: #000;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.grid .box:hover
+{
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background: white;
   float: left;
   margin: 15px;
   box-sizing: border-box;
@@ -37,55 +54,17 @@ h1 {
   display: block;
   height: 0;
   clear: both;
-}
-.container .mccoy:hover {
-  background: white;
-}
-.container .kirk
-{
-  position: relative;
-  width: 300px;
-  height: 100px;
-  background: #000;
-  float: left;
-  margin: 15px;
-  box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 10px;
-}
-.clearfix:after {
-  content: "";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
-.container .kirk:hover {
-  background: white;
-}
-.container .spock
-{
-  position: relative;
-  width: 300px;
-  height: 100px;
-  background: #000;
-  float: left;
-  margin: 15px;
-  box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 10px;
-}
-.clearfix:after {
-  content: "";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
-.container .spock:hover {
-  background: white;
 }
 .match {
   border: 2px solid green;
   background-image: none !important;
+}
+#message {
+
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #34e1eb;
+  font-style: italic;
+  font-weight: bolder;
 }
