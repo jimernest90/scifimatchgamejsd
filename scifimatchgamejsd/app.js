@@ -23,6 +23,7 @@ let firstGuess = ''
 
 let secondGuess = ''
 
+  //function to turn blue when selected
   function selection(){$boxes.click(function(){
 
     if ($(this) !== clicked){
@@ -31,7 +32,9 @@ let secondGuess = ''
     }
   })
   }
-  function selection(){$boxes.click(function(){
+
+  //function to turn green when matched
+  function match(){$boxes.click(function(){
 
     if ($(this) !== clicked){
       console.log('match')
@@ -40,48 +43,46 @@ let secondGuess = ''
   })
   }
 
+$boxes.click(function(){
 //if count is less than 2 add 1
-if (count < 2 && $(this) !== undefined) {
+if (count < 2) {
 
   count++
 
 
+} if (count === 1) {
+
+  firstGuess = $(this).data("name")
+
+  console.log(firstGuess)
+
   selection()
 
-} else if (count === 1 && $(this)!== undefined) {
+} else {
+
+ secondGuess = $(this).data("name")
 
   console.log('you have selected two')
 
+  console.log(secondGuess)
+
   selection()
 
-} else{
-
-
-
 }
+check to see if they match
 
+} if (firstGuess === secondGuess){
 
+  console.log('you matched')
 
-//    let firstGuess = ''
-//    let secondGuess =''
-//    let count= 0
-//
-//   $boxes.click(function(){
-//  //...
-//    if (count < 2) {
-//     count++
-//     //if count is less that 2 add 1
-//    if (count === 1) {
-//    // Assign first guess
-//     firstGuess =
-//     //add selection class to current target
-//
-//   } else {
-//   // Assign second guess
-//    secondGuess =
-//
-// }
-// })
+  match()
+
+} else (
+
+  $(this).removeClass('selected')
+)
+})
+
 
 
   })
