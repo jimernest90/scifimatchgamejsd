@@ -17,31 +17,19 @@ h1 {
   padding-top: 1em;
   text-align: center;
 }
-.game
+.container
 {
   position: fixed;
   width: 1200px;
   height:300px;
   padding-left: 130px;
 }
-.grid .box
+.container .peopleOne
 {
   position: relative;
   width: 300px;
   height: 100px;
   background: #000;
-  float: left;
-  margin: 15px;
-  box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 10px;
-}
-.grid .box:hover
-{
-  position: relative;
-  width: 300px;
-  height: 100px;
-  background: white;
   float: left;
   margin: 15px;
   box-sizing: border-box;
@@ -55,9 +43,118 @@ h1 {
   height: 0;
   clear: both;
 }
-.match {
-  border: 2px solid green;
-  background-image: none !important;
+.container .peopleOne:hover {
+  background: white;
+}
+.container .peopleTwo
+{
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background: #000;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.container .peopleTwo:hover {
+  background: white;
+}
+.container .peopleThree
+{
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background: #000;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.container .peopleThree:hover {
+  background: white;
+}
+.container .quoteOne {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background: #000;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.container .quoteOne:hover {
+  background: white;
+}
+.container .quoteTwo {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background: #000;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.container .quoteTwo:hover {
+  background: white;
+}
+.container .quoteThree {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background: #000;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.container .quoteThree:hover {
+  background: white;
 }
 #message {
 
