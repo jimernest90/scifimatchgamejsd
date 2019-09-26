@@ -24,7 +24,7 @@ h1 {
   height:300px;
   padding-left: 130px;
 }
-.container .peopleOne
+.container .box
 {
   position: relative;
   width: 300px;
@@ -43,125 +43,32 @@ h1 {
   height: 0;
   clear: both;
 }
-.container .peopleOne:hover {
+.container .box:hover {
   background: white;
 }
-.container .peopleTwo
-{
-  position: relative;
-  width: 300px;
-  height: 100px;
-  background: #000;
-  float: left;
-  margin: 15px;
-  box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 10px;
+.selected{
+  border: 2px solid blue;
 }
-.clearfix:after {
-  content: "";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
-.container .peopleTwo:hover {
-  background: white;
-}
-.container .peopleThree
-{
-  position: relative;
-  width: 300px;
-  height: 100px;
-  background: #000;
-  float: left;
-  margin: 15px;
-  box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 10px;
-}
-.clearfix:after {
-  content: "";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
-.container .peopleThree:hover {
-  background: white;
-}
-.container .quoteOne {
-  position: relative;
-  width: 300px;
-  height: 100px;
-  background: #000;
-  float: left;
-  margin: 15px;
-  box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 10px;
-}
-.clearfix:after {
-  content: "";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
+.match {
+  border: 2px solid green;
 }
 
-.container .quoteOne:hover {
-  background: white;
-}
-.container .quoteTwo {
-  position: relative;
-  width: 300px;
-  height: 100px;
-  background: #000;
-  float: left;
-  margin: 15px;
-  box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 10px;
-}
-.clearfix:after {
-  content: "";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
+/* "You did it!" message */
 
-.container .quoteTwo:hover {
-  background: white;
-}
-.container .quoteThree {
-  position: relative;
-  width: 300px;
-  height: 100px;
-  background: #000;
-  float: left;
-  margin: 15px;
-  box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 10px;
-}
-.clearfix:after {
-  content: "";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
-
-.container .quoteThree:hover {
-  background: white;
-}
-#message {
-
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 20px;
-  color: #34e1eb;
-  font-style: italic;
-  font-weight: bolder;
+#successMessage {
+    position: absolute;
+    left: 580px;
+    top: 250px;
+    width: 0;
+    height: 0;
+    z-index: 100;
+    background: #dfd;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    padding: 20px;
 }
