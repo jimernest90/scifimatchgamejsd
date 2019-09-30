@@ -4,107 +4,94 @@
 //make items disappear
 
 $(document).ready(function() {
-//function to randomize boxes
- const $container = $('.container'),
-    $boxes = $container.children();
-    //defines boxes as the children of the container
-    $boxes.sort(function() {return Math.random() - .5; });
-    // update dom with new sort
-    $container.append($boxes);
+  let selectedCharacterName
+  let selectedQuote
 
-//make a function to attach a class to the the clicked
+  //function to randomize boxes
+  const $container = $('.container'),
+  $boxes = $container.children();
+  //defines boxes as the children of the container
+  $boxes.sort(function() {return Math.random() - .5; });
+  // update dom with new sort
+  $container.append($boxes);
 
+  function displayPoints() {
+
+   $('.points').text(count)
+  }
+
+  function displayMessage(){
+
+   $('.message').text('YOU WON!!!')
+  }
 
   let count = 0
 
-  let firstGuess = ''
+  $boxes.click(function() {
 
-  let secondGuess = ''
+    console.log($(this).data("name"))
 
-
-  //function to turn blue when selected
-  function selection(){
-    $boxes.click(function(){
-
-      let clicked = $(this)
+    if ($(this).hasClass("character")) {
+      // remove class from all other characther cards, so only
+      // one character card can be selected at time
+      $(".box.character").removeClass("selected")
 
 
-    if (clicked.nodeName === 'section'){
+      $(this).addClass('selected')
 
-      return
+      console.log('user clicked on character card')
+      selectedCharacterName = $(this).data('name')
+
     } else {
+      console.log('user clicked on quote card')
+      $(".box.quote").removeClass("selected")
+      $(this).addClass('selected')
+      selectedQuote = $(this).data('quote')
 
-      // console.log('this was selected')
-        clicked.addClass('selected')
+
+    } if (selectedCharacterName !== '' && selectedQuote !== '') {
+
+       if (selectedCharacterName === selectedQuote) {
+
+        if($(this).data('name')){
+
+         $(this).hide()
+
+         displayPoints()
+
+       }else if($(this).data('quote')){
+
+         $(this).hide()
+
+         count++
+
+         displayPoints()
+      }
+      }
     }
+
+ if(count === 3){
+
+  displayMessage()
+
+ }else {
+
+  return
+ }
+     // console.log(selectedCharacterName)
   })
-  }
-
-  //function to turn green when matched
-  function match(){ $boxes.click(function(){
-
-      let clicked = $(this)
-
-
-      // console.log('match')
-      clicked.addClass('match')
-  })
-}
-
-//   function resetGuesses(){
-//
-//     firstGuess = ''
-//
-//     secondGuess=''
-//
-//     count = 0
-//
-//     $(this).removeClass('selected')
-//   }
-// $boxes.click(function(){
-
-//if count is less than 2 add 1
-
-$boxes.click(function(){
-
-  let clicked = $(this)
-
-
- if (count < 2) {
-
-  count++
-
-
-} if (count === 1) {
-
-  //firstGuess = the clicked data name
-  firstGuess = clicked.data("name")
-
-  console.log(firstGuess)
-
-  selection()
-
-} else {
-
- secondGuess = clicked.data("name")
-
-  // console.log('you have selected two')
-
-  console.log(secondGuess)
-
-  selection()
-
-}
-
-if (firstGuess !== '' && secondGuess !== '') {
-      // and the first guess matches the second match...
-  if (firstGuess === secondGuess) {
-        // run the match function
-    match()
-
-  }else {
-
-  }
-}
 })
-})
+
+  //   function resetGuesses(){
+  //
+  //     firstGuess = ''
+  //
+  //     secondGuess=''
+  //
+  //     count = 0
+  //
+  //     $(this).removeClass('selected')
+  //   }
+  // $boxes.click(function(){
+
+  //if count is less than 2 add 1
