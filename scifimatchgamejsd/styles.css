@@ -69,3 +69,17 @@ h1 {
   font-weight: bold;
   font-size: 80px;
 }
+.losingMessage{
+
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 80px;
+}
+#resetButton {
+
+  position: absolute;
+  color: black;
+  height: 600px;
+  width: 100px;
+}

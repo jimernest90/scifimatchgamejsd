@@ -25,6 +25,44 @@ $(document).ready(function() {
    $('.message').text('YOU WON!!!')
   }
 
+  function displayLosingMessage(){
+
+   $('.losingMessage').text('YOU LOSE!!!')
+  }
+
+  function resetGuesses(){
+
+    $('.box.character').removeClass('selected')
+
+    $('box.quote').removeClass('selected')
+
+    $('.box.quote').show(1000)
+
+    count = 0
+
+    guesses = 0
+
+
+  }
+
+  function resetMessage(){
+
+    $('.message').text('')
+
+    $('.points').text('')
+
+    $('.losingMessage').text('')
+  }
+
+  $('#resetButton').click(function(){
+
+    resetGuesses()
+
+    resetMessage()
+
+
+  })
+  let guesses = 0
   let count = 0
 
   $boxes.click(function() {
@@ -51,47 +89,43 @@ $(document).ready(function() {
 
     } if (selectedCharacterName !== '' && selectedQuote !== '') {
 
-       if (selectedCharacterName === selectedQuote) {
+     } if(selectedCharacterName !== selectedQuote) {
+
 
         if($(this).data('name')){
 
-         $(this).hide()
+         guesses++
+
+       }else if($(this).data('quote'))
+
+         guesses++
+
+      }else if(selectedCharacterName === selectedQuote) {
+
+        if($(this).data('name')){
 
          displayPoints()
 
        }else if($(this).data('quote')){
 
-         $(this).hide()
+         $(this).hide(1000)
 
          count++
 
          displayPoints()
       }
-      }
+    }if(count === 3){
+
+     displayPoints()
+
+     displayMessage()
     }
 
- if(count === 3){
-
-  displayMessage()
-
- }else {
-
-  return
- }
      // console.log(selectedCharacterName)
+     if(guesses >= 4){
+
+      displayLosingMessage()
+
+     }
   })
 })
-
-  //   function resetGuesses(){
-  //
-  //     firstGuess = ''
-  //
-  //     secondGuess=''
-  //
-  //     count = 0
-  //
-  //     $(this).removeClass('selected')
-  //   }
-  // $boxes.click(function(){
-
-  //if count is less than 2 add 1
