@@ -7,13 +7,19 @@ $(document).ready(function() {
   let selectedCharacterName
   let selectedQuote
 
+  randomize()
+
   //function to randomize boxes
-  const $container = $('.container'),
-  $boxes = $container.children();
-  //defines boxes as the children of the container
-  $boxes.sort(function() {return Math.random() - .5; });
-  // update dom with new sort
-  $container.append($boxes);
+  function randomize(){
+
+    const $container = $('.container'),
+    $boxes = $container.children();
+    //defines boxes as the children of the container
+    $boxes.sort(function() {return Math.random() - .5; });
+    // update dom with new sort
+    $container.append($boxes);
+  }
+
 
   function displayPoints() {
 
@@ -41,6 +47,8 @@ $(document).ready(function() {
     $('.box.character').removeClass('selected')
 
     $('.box.quote').removeClass('selected')
+
+    randomize()
 
   }
 
@@ -71,7 +79,7 @@ $(document).ready(function() {
 
     $('#instructions').css('display','none')
   })
-  
+
   let guesses = 0
   let count = 0
 
@@ -132,7 +140,7 @@ $(document).ready(function() {
     }
 
      // console.log(selectedCharacterName)
-     if(guesses >= 9){
+     if(guesses >= 12){
 
       displayLosingMessage()
 
