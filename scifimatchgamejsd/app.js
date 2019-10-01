@@ -32,16 +32,15 @@ $(document).ready(function() {
 
   function resetGuesses(){
 
-    $('.box.character').removeClass('selected')
-
-    $('box.quote').removeClass('selected')
-
     $('.box.quote').show(1000)
 
     count = 0
 
     guesses = 0
 
+    $('.box.character').removeClass('selected')
+
+    $('.box.quote').removeClass('selected')
 
   }
 
@@ -60,8 +59,19 @@ $(document).ready(function() {
 
     resetMessage()
 
+  })
+
+  $('#instructionButton').click(function(){
+
+    $('#instructions').css('display','block')
 
   })
+
+  $('#instructionButton').mouseout(function(){
+
+    $('#instructions').css('display','none')
+  })
+  
   let guesses = 0
   let count = 0
 
@@ -114,7 +124,7 @@ $(document).ready(function() {
 
          displayPoints()
       }
-    }if(count === 3){
+    }if(count === 6){
 
      displayPoints()
 
@@ -122,7 +132,7 @@ $(document).ready(function() {
     }
 
      // console.log(selectedCharacterName)
-     if(guesses >= 4){
+     if(guesses >= 9){
 
       displayLosingMessage()
 

@@ -10,12 +10,24 @@ body {
   background: url("space image.jpg");
   font-family: 'Saira Stencil One', cursive;
   background-repeat: no-repeat;
-  background: cover;
+  background-size: auto;
 }
 h1 {
-  color: #000;
+  color: white;
   padding-top: 1em;
   text-align: center;
+}
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  font-style: italic;
+}
+p {
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
 }
 .container
 {
@@ -78,8 +90,31 @@ h1 {
 }
 #resetButton {
 
+  margin-left: auto;
   position: absolute;
   color: black;
-  height: 600px;
+  height: 50px;
   width: 100px;
+  font-size: 15px;
+  background-color: #1cb898;
+}
+#instructions
+{
+
+  display:none;
+  position:absolute;
+  color: white;
+  height: 50px;
+  width: 100px;
+  font-size: 10px;
+}
+#instructionButton
+{
+  position: center;
+  color: black;
+  height: 50px;
+  width: 100px;
+  font-size: 15px;
+  background-color: #1cb898;
+
 }
