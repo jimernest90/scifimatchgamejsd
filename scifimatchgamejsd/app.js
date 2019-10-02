@@ -24,7 +24,7 @@ $(document).ready(function() {
 
   function displayPoints() {
 
-   $('.points').text(count)
+   $('.points').text(`${count}/6`)
   }
 
   function displayMessage(){
@@ -67,6 +67,9 @@ $(document).ready(function() {
     resetGuesses()
 
     resetMessage()
+
+    $('.box').removeAttr("disabled")
+
 
   })
 
@@ -112,20 +115,24 @@ $(document).ready(function() {
 
      } if(selectedCharacterName !== selectedQuote) {
 
-
         if($(this).data('name')){
 
          guesses++
 
+
+
        }else if($(this).data('quote'))
 
          guesses++
+
 
       }else if(selectedCharacterName === selectedQuote) {
 
         if($(this).data('name')){
 
          displayPoints()
+
+         $('.box').removeClass('selected')
 
        }else if($(this).data('quote')){
 
@@ -134,6 +141,8 @@ $(document).ready(function() {
          count++
 
          displayPoints()
+
+         $('.box').removeClass('selected')
       }
     }if(count === 6){
 
@@ -141,7 +150,9 @@ $(document).ready(function() {
 
      displayMessage()
 
-     $(".box").unbind("click");
+     $(".box").attr("disabled");
+
+
     }
 
      // console.log(selectedCharacterName)
@@ -149,7 +160,10 @@ $(document).ready(function() {
 
       displayLosingMessage()
 
-      $(".box").unbind("click");
+      $(".box").attr("disabled");
+
+
+
 
 
 
