@@ -6,14 +6,15 @@
 $(document).ready(function() {
   let selectedCharacterName
   let selectedQuote
-
+  const $container = $('.container')
+  let $boxes = $container.children();
   randomize()
 
   //function to randomize boxes
   function randomize(){
 
-    const $container = $('.container'),
-    $boxes = $container.children();
+    // const $container = $('.container'),
+    // $boxes = $container.children();
     //defines boxes as the children of the container
     $boxes.sort(function() {return Math.random() - .5; });
     // update dom with new sort
@@ -69,16 +70,18 @@ $(document).ready(function() {
 
   })
 
-  $('#instructionButton').click(function(){
 
-    $('#instructions').css('display','block')
 
-  })
-
-  $('#instructionButton').mouseout(function(){
-
-    $('#instructions').css('display','none')
-  })
+  // $('#instructionButton').click(function(){
+  //
+  //   $('#instructions').css('display','block')
+  //
+  // })
+  //
+  // $('#instructionButton').mouseout(function(){
+  //
+  //   $('#instructions').css('display','none')
+  // })
 
   let guesses = 0
   let count = 0
@@ -137,12 +140,19 @@ $(document).ready(function() {
      displayPoints()
 
      displayMessage()
+
+     $(".box").unbind("click");
     }
 
      // console.log(selectedCharacterName)
      if(guesses >= 12){
 
       displayLosingMessage()
+
+      $(".box").unbind("click");
+
+
+
 
      }
   })

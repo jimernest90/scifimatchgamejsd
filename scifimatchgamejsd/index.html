@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <title>Sci-fi Match Game</title>
     <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link href="lity-2.4.0/dist/lity.css" rel="stylesheet">
+    <script src="lity-2.4.0/vendor/jquery.js"></script>
+    <script src="lity-2.4.0/dist/lity.js"></script>
   </head>
   <body>
     <h1>Are you a sci-f'EYE' master?</h1>
     <h2>Match the eyes with the quotes. Are you a sci-f'eye master?</h2>
-    <div class="points"></div>
-    <div class="losingMessage"></div>
-    <div class="message"></div>
-    <button id ="instructionButton" type="submit">How To Play
-     <div id="instructions">
-      <p>Step 1: Press the eyes.</p>
-      <p>Step 2: Press the corresponding quote.</p>
-      <p>If they match, Congrats. If they don't, Try again.</p>
-    </div>
+    <div class="main">
+      <div class="points"></div>
+      <div class="losingMessage"></div>
+      <div class="message"></div>
+      <a href="instructions.jpg" data-lity data-lity-desc="How to Play"><button id ="instructionButton" type="submit">How To Play</a>
+       <!-- <div id="instructions">
+        <p>Step 1: Press the eyes.</p>
+        <p>Step 2: Press the corresponding quote.</p>
+        <p>Step 3: If they match,The quote dissappears.</p>
+        <p>step 4: If they don't match, Try again.</p>
+      </div> -->
+      <button id='resetButton' type="reset">Play Again</button>
     </button>
+    </div>
+  </div>
       <div class="container">
         <div class="box character" data-name="data">
           <img src="eyes/data-eyes.png" alt="" width="300px" height="100px">
@@ -56,10 +64,10 @@
           That is quite logical, Captain.
         </div>
       </div>
-      <button id='resetButton' type="reset">Play Again</button>
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
+      <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
     <script src="app.js"></script>
   </body>
 </html>

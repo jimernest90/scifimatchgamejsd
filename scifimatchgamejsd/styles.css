@@ -4,13 +4,21 @@
 *::after {
   box-sizing: border-box;
 }
+a{
+  text-decoration: none;
+  color: #000;
+}
 body {
   margin: 0;
   padding: 0;
-  background: url("space image.jpg");
+  background: url("space-image.jpg")repeat 0px 0px;
+   background-attachment: fixed;
+   -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     -ms-background-size: cover;
+   background-size: cover;
   font-family: 'Saira Stencil One', cursive;
-  background-repeat: no-repeat;
-  background-size: auto;
 }
 h1 {
   color: white;
@@ -25,9 +33,13 @@ h2 {
 }
 p {
   color: white;
-  text-align: center;
+  text-align: left;
   font-size: 15px;
   font-style: italic;
+}
+.main{
+  margin: 0 auto;
+  text-align: center;
 }
 .container
 {
